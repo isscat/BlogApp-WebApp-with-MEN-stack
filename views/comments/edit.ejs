@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+<div class="container" style="margin: 30px auto;width: 50%">
+	<div class="card">
+	  	<div class="card-body">
+	    Edit
+	  	</div>
+	  	<div class="container" style="margin: 0 auto;">
+		<form action="/blogs/<%=blog_id%>/comment/<%=comment._id%>?_method=PUT" method="POST" class="container">
+			<div class="form-group">
+			    
+			    <input name="comment[text]" type="text" class="form-control" id="exampleFormControlInput1" value="<%=comment.text%>">
+	  		</div>
+	  		
+	  		<div class="form-group">
+				<input type="submit" class="btn btn-outline-primary" name="submit">
+			</div>
+		
+		</form>
+	</div>
+	
+	</div>
+	
+
+</div>
+
+<%- include('../partials/footer') %>
